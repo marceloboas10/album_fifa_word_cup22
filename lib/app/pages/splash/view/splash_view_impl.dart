@@ -7,5 +7,19 @@ abstract class SplashViewImpl extends State<SplashPage>
     with Loader<SplashPage>
     implements SplashView {
   @override
-  void logged(bool isLogged) {}
+  void initState() {
+    widget.presenter.view = this;
+    super.initState();
+  }
+
+  @override
+  void logged(bool isLogged) {
+    hideLoader();
+    if (isLogged) {
+      Navigator.of(context).pushNamedAndRemoveUntil("/home", (route) => false);
+    } else {
+      Navigator.of(context)
+          .pushNamedAndRemoveUntil("/auth/login", (route) => false);
+    }
+  }
 }
