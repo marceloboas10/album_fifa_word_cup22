@@ -1,6 +1,6 @@
 import 'package:album_worldcup22/app/pages/splash/presenter/splash_presenter.dart';
 import 'package:album_worldcup22/app/pages/splash/splash_page.dart';
-import 'package:album_worldcup22/app/pages/splash/view/splash_presenter_impl.dart';
+import 'package:album_worldcup22/app/pages/splash/presenter/splash_presenter_impl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
 

@@ -1,6 +1,9 @@
 import 'package:album_worldcup22/app/core/rest/custom_dio.dart';
 import 'package:album_worldcup22/app/core/ui/theme/theme_config.dart';
 import 'package:album_worldcup22/app/pages/auth/login/login_page.dart';
+import 'package:album_worldcup22/app/pages/auth/login/login_route.dart';
+import 'package:album_worldcup22/app/pages/auth/register/register_page.dart';
+import 'package:album_worldcup22/app/pages/auth/register/view/register_route.dart';
 import 'package:album_worldcup22/app/pages/home/home_page.dart';
 import 'package:album_worldcup22/app/pages/splash/splash_route.dart';
 import 'package:album_worldcup22/app/repository/auth/auth_repository.dart';
@@ -23,7 +26,8 @@ class AlbumWorldcupApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeConfig.theme,
         routes: {"/": (_) => const SplashRoute(),
-        "/auth/login": (_)=> const LoginPage(),
+        "/auth/login": (_)=> const LoginRoute(),
+        "/auth/register": (_)=> const RegisterRoute(),
         "/home": (_)=> const HomePage()},
       ),
     );

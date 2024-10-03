@@ -1,13 +1,13 @@
 import 'package:album_worldcup22/app/core/config/env/env.dart';
 import 'package:dio/dio.dart';
-import 'package:dio/io.dart';
+import 'package:dio/native_imp.dart';
 
 class CustomDio extends DioForNative {
   CustomDio()
       : super(BaseOptions(
             baseUrl: Env.instance['backend_base_url'] ?? '',
-            connectTimeout: const Duration(seconds: 5),
-            receiveTimeout: const Duration(seconds: 60))) {
+            connectTimeout: 5000,
+            receiveTimeout: 60000)) {
     interceptors.add(LogInterceptor(requestBody: true, responseBody: true));
   }
 
