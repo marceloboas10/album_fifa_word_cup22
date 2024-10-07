@@ -7,6 +7,7 @@ mixin Messages<T extends StatefulWidget> on State<T> {
   void showError(String message) {
     showTopSnackBar(
       Overlay.of(context),
+      animationDuration: const Duration(seconds: 4),
       CustomSnackBar.error(
         message: message,
         backgroundColor: ColorsApp.instance.primary,
@@ -17,6 +18,7 @@ mixin Messages<T extends StatefulWidget> on State<T> {
   void showInfo(String message) {
     showTopSnackBar(
       Overlay.of(context),
+      animationDuration: const Duration(seconds: 4),
       CustomSnackBar.info(
         message: message,
       ),
@@ -26,6 +28,7 @@ mixin Messages<T extends StatefulWidget> on State<T> {
   void showSucess(String message) {
     showTopSnackBar(
       Overlay.of(context),
+      animationDuration: const Duration(seconds: 4),
       CustomSnackBar.success(
         message: message,
       ),
